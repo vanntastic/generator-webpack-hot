@@ -24,6 +24,8 @@ Generate a webpack hot loadable es6 ready project. This structure is different f
 
 ## Usage & Workflow
 
+![](screenshot.gif)
+
 ```
 yo webpack-hot
 npm start

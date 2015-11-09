@@ -81,6 +81,11 @@ module.exports = yeoman.generators.Base.extend({
 				this.props
 			);
 
+			this.fs.copyTpl(
+				this.templatePath('README.md'),
+				this.destinationPath('README.md'),
+				this.props
+			);
 
 			var srcDir = this.destinationPath() + "/src"; 
 			mkdirp.sync(srcDir);
