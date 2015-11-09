@@ -1,5 +1,7 @@
 ## Webpack hot generator 
 
+![](screenshot.gif)
+
 Generate a webpack hot loadable es6 ready project. This structure is different from using something like webpack-dev-server, it provides:
 
 - framework agnosticism, use react, angular, whatever you like
@@ -23,8 +25,6 @@ Generate a webpack hot loadable es6 ready project. This structure is different f
 ```
 
 ## Usage & Workflow
-
-![](screenshot.gif)
 
 ```
 yo webpack-hot
