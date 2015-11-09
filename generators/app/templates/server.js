@@ -11,10 +11,7 @@ app.use(require('morgan')('short'));
 
 app.use(require("webpack-dev-middleware")(compiler, {
     noInfo: true, 
-    publicPath: webpackConfig.output.publicPath,
-    stats: {
-    	colors: true
-    }
+    publicPath: webpackConfig.output.publicPath
 }));
 
 app.use(require("webpack-hot-middleware")(compiler, {

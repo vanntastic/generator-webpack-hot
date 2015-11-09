@@ -4,9 +4,9 @@ Generate a webpack hot loadable es6 ready project. This structure is different f
 
 - framework agnosticism, use react, angular, whatever you like
 - es6 support via babel
-- hotloading via webpack-hot-middleware and an express server
+- hotloading via [webpack-hot-middleware](https://www.npmjs.com/package/webpack-hot-middleware) and an express server
 - support for request proxying via http-proxy, super handy if you need access to a backend server that you don't have to control of or if you don't want to mess with CORS just for development
-- sass support
+- sass support in webpack so you can simply require in your sass files
 
 ## Directory structure
 
@@ -33,11 +33,13 @@ npm start
 
 ## Builds
 
-Once you are ready to build your app, simply
+Once you are ready to build your app, simply run:
 
 ```
 npm run build
 ```
+
+and your build will be ready in the `build` folder
 
 ## License
 
