@@ -1,7 +1,7 @@
 {
   "name": "generator-webpack-hot",
   "version": "0.0.0",
-  "description": "A Yeoman generator for webpack hot loaded enabled structure",
+  "description": "A Yeoman generator for webpack hot loaded project",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "vanntastic/generator-webpack-hot",
