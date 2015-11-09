@@ -9,8 +9,8 @@
   	"url": "<%= website %>"
   },
   "scripts": {
-  	"start": "webpack && node ./server.js",
-  	"build": "cp src/index.html build/index.html && webpack"
+  	"start": "export NODE_ENV='development'; webpack; node ./server.js",
+  	"build": "export NODE_ENV='production'; cp ./src/index.html ./build/index.html; webpack"
   },
   "license": "MIT",
   "devDependencies": {

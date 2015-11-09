@@ -1,10 +1,10 @@
 {
   "name": "generator-webpack-hot",
   "version": "0.0.0",
-  "description": "Yeoman generator",
+  "description": "A Yeoman generator for webpack hot loaded enabled structure",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "vanntastic/generator-generator-webpack-hot",
+  "repository": "vanntastic/generator-webpack-hot",
   "author": {
     "name": "Vannarith Ek",
     "email": "",

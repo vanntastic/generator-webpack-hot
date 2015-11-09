@@ -3,12 +3,13 @@ var hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&tim
 // required for Promise bug in the sass loaders : https://github.com/webpack/css-loader/issues/145
 require('es6-promise').polyfill();
 
-// CONTINUE HERE: test to make sure that the generator works and it generates the right bundle
-
+var entryFiles = process.env['NODE_ENV'] == 'production' ? './main.js' : [hotMiddlewareScript, './main.js'];
 module.exports = {
-	entry: ['./src/main.js', hotMiddlewareScript],
+	context: __dirname + '/src',
+	entry: entryFiles,
 	output: {
 		path: __dirname + '/build',
+		publicPath: '/',
 		filename: 'main.js'
 	},
 	devtool: 'source-map',
