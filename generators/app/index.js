@@ -90,6 +90,9 @@ module.exports = yeoman.generators.Base.extend({
 			var srcDir = this.destinationPath() + "/src"; 
 			mkdirp.sync(srcDir);
 
+			var buildDir = this.destinationPath() + "/build";
+			mkdirp.sync(buildDir);
+
 			this.fs.copyTpl(
 				this.templatePath('main.js'),
 				srcDir + "/main.js",

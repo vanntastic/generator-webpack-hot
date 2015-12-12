@@ -15,7 +15,12 @@ if (process.env['NODE_ENV'] == 'production') {
 	plugins = [
 		new webpack.IgnorePlugin(/vertx/),
 		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.NoErrorsPlugin()
+		new webpack.NoErrorsPlugin(),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
+		})
 	]
 }
 module.exports = {
