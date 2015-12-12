@@ -3,7 +3,21 @@ var hotMiddlewareScript = 'webpack-hot-middleware/client?path=/__webpack_hmr&tim
 // required for Promise bug in the sass loaders : https://github.com/webpack/css-loader/issues/145
 require('es6-promise').polyfill();
 
-var entryFiles = process.env['NODE_ENV'] == 'production' ? './main.js' : [hotMiddlewareScript, './main.js'];
+var entryFiles = [hotMiddlewareScript, './main.js'];
+var plugins = [
+	new webpack.IgnorePlugin(/vertx/),
+	new webpack.optimize.OccurenceOrderPlugin(),
+	new webpack.HotModuleReplacementPlugin(),
+	new webpack.NoErrorsPlugin()
+];
+if (process.env['NODE_ENV'] == 'production') {
+	entryFiles = './main.js';
+	plugins = [
+		new webpack.IgnorePlugin(/vertx/),
+		new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.NoErrorsPlugin()
+	]
+}
 module.exports = {
 	context: __dirname + '/src',
 	entry: entryFiles,
@@ -45,10 +59,5 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [
-		new webpack.IgnorePlugin(/vertx/),
-		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin()
-	]
+	plugins: plugins
 }
