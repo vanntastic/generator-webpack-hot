@@ -1,6 +1,6 @@
 {
   "name": "generator-webpack-hot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Yeoman generator for webpack hot loaded project",
   "license": "MIT",
   "main": "app/index.js",
