@@ -24,8 +24,7 @@ module.exports = yeoman.generators.Base.extend({
 				name: 'email',
 				message: 'What is your email?',
 				default: this.user.git.email(),
-				store: true,
-				default: ''
+				store: true
 			},
 			{
 				name: 'website',
